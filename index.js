@@ -1,18 +1,3 @@
-// Accordion functionality
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const item = button.parentElement;
-        const isActive = item.classList.contains('active');
-
-        // Close all items
-        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-
-        // Open clicked item if it wasn't already open
-        if (!isActive) {
-            item.classList.add('active');
-        }
-    });
-});
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');
@@ -31,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.toggle('nav-open');
         });
 
-        // Close menu when clicking overlay
         overlay.addEventListener('click', function () {
             navToggle.classList.remove('active');
             navLinks.classList.remove('active');
@@ -39,9 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.remove('nav-open');
         });
 
-        // Close menu when clicking a link
-        const links = navLinks.querySelectorAll('a');
-        for (let i = 0; i < links.length; i++) {
+        var links = navLinks.querySelectorAll('a');
+        for (var i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function () {
                 navToggle.classList.remove('active');
                 navLinks.classList.remove('active');
@@ -52,16 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // FAQ Accordion functionality
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    var accordionHeaders = document.querySelectorAll('.accordion-header');
 
-    for (let i = 0; i < accordionHeaders.length; i++) {
+    for (var i = 0; i < accordionHeaders.length; i++) {
         accordionHeaders[i].addEventListener('click', function () {
-            const item = this.parentElement;
-            const isActive = item.classList.contains('active');
+            var item = this.parentElement;
+            var isActive = item.classList.contains('active');
 
             // Close all items
-            const allItems = document.querySelectorAll('.accordion-item');
-            for (let j = 0; j < allItems.length; j++) {
+            var allItems = document.querySelectorAll('.accordion-item');
+            for (var j = 0; j < allItems.length; j++) {
                 allItems[j].classList.remove('active');
             }
 
