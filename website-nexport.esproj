@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="static\css\" />
+    <Folder Include="static\images\" />
     <Folder Include="static\js\" />
     <Folder Include="templates\" />
   </ItemGroup>
